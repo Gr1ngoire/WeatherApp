@@ -36,7 +36,9 @@ class ChoiceVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // making gradient
         createGradient(upperColor: UIColor.purple, lowerColor: UIColor.red)
+        
         //city picker setup
         self.cityPicker.delegate = self
         self.cityPicker.dataSource = self
@@ -44,7 +46,7 @@ class ChoiceVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        // remaking gradient
         createGradient(upperColor: UIColor.purple, lowerColor: UIColor.red)
     }
     
@@ -54,7 +56,7 @@ class ChoiceVC: UIViewController {
         performSegue(withIdentifier: "sendingCity", sender: self)
     }
     
-    // MARK: - Navigation
+    // MARK: - Getting the Data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard segue.identifier == "sendingCity" else { return }
         let segueVC = segue.destination as! ForecastViewController
