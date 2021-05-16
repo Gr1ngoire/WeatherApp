@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1kb-MM-MHj">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ChoiceVC-->
+        <scene sceneID="0qE-4B-dgD">
+            <objects>
+                <viewController id="1kb-MM-MHj" customClass="ChoiceVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rmm-Sl-IdF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="b7w-b8-Gsy">
+                                <rect key="frame" x="135" y="576.33333333333337" width="144" height="99.666666666666629"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powered By:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKT-YR-oDN">
+                                        <rect key="frame" x="15.333333333333336" y="0.0" width="113.33333333333331" height="23.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                                        <color key="textColor" red="0.99953407049999998" green="0.98835557699999999" blue="0.47265523669999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_white" translatesAutoresizingMaskIntoConstraints="NO" id="sWl-lH-xc8">
+                                        <rect key="frame" x="0.33333333333334281" y="38.333333333333258" width="143.66666666666666" height="61.333333333333343"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="W3n-4h-Ooz">
+                                <rect key="frame" x="47" y="162" width="320" height="271"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ciq-a7-lDv">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="30"/>
+                                        <state key="normal" title="Show the forecast for:">
+                                            <color key="titleColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="cityPickButtonAction:" destination="1kb-MM-MHj" eventType="touchUpInside" id="tDt-SD-8D6"/>
+                                            <action selector="showForecastBtn:" destination="x9t-nP-1An" eventType="touchUpInside" id="6i1-od-X3c"/>
+                                            <segue destination="qzc-WP-42G" kind="presentation" identifier="sendingCity" modalPresentationStyle="fullScreen" id="vQW-V4-OoP"/>
+                                        </connections>
+                                    </button>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mys-lO-yHc">
+                                        <rect key="frame" x="0.0" y="55" width="320" height="216"/>
+                                    </pickerView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2XV-yT-iDs"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="b7w-b8-Gsy" firstAttribute="leading" secondItem="2XV-yT-iDs" secondAttribute="leading" constant="135" id="8TI-HY-1dl"/>
+                            <constraint firstItem="2XV-yT-iDs" firstAttribute="trailing" secondItem="b7w-b8-Gsy" secondAttribute="trailing" constant="135" id="8m7-eS-7Mw"/>
+                            <constraint firstItem="mys-lO-yHc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2XV-yT-iDs" secondAttribute="leading" constant="47" id="Lre-oJ-voT"/>
+                            <constraint firstItem="2XV-yT-iDs" firstAttribute="bottom" secondItem="b7w-b8-Gsy" secondAttribute="bottom" constant="60" id="ilv-Gh-YoU"/>
+                            <constraint firstItem="W3n-4h-Ooz" firstAttribute="top" secondItem="2XV-yT-iDs" secondAttribute="top" constant="162" id="l1I-Yv-SRE"/>
+                            <constraint firstItem="2XV-yT-iDs" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="W3n-4h-Ooz" secondAttribute="trailing" constant="47" id="odr-Zo-Evr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="aOm-fL-6st"/>
+                    <connections>
+                        <outlet property="cityPicker" destination="mys-lO-yHc" id="5qW-9r-w3b"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TyL-of-qYa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="x9t-nP-1An" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2444.9275362318845" y="-51.358695652173914"/>
+        </scene>
+        <!--Forecast View Controller-->
+        <scene sceneID="Rfk-p7-Mty">
+            <objects>
+                <viewController id="qzc-WP-42G" customClass="ForecastViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BjK-r5-3gs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0A-j9-Cay">
+                                <rect key="frame" x="50" y="595" width="314" height="41"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="25"/>
+                                <state key="normal" title="Get back to the city list">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getBackButton:" destination="qzc-WP-42G" eventType="touchUpInside" id="xDt-jT-tLi"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-eM-eps">
+                                <rect key="frame" x="70" y="130" width="274" height="147.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="82R-NH-dcq">
+                                        <rect key="frame" x="20.666666666666671" y="0.0" width="232.66666666666663" height="58"/>
+                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="50"/>
+                                        <color key="textColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="cJX-4m-5wK">
+                                        <rect key="frame" x="10" y="83" width="254" height="19.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dia-hy-Jrk">
+                                                <rect key="frame" x="0.0" y="0.0" width="70.666666666666671" height="19.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                <color key="textColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weather Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbp-6M-cAX">
+                                                <rect key="frame" x="143.66666666666666" y="0.0" width="110.33333333333334" height="19.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="110" translatesAutoresizingMaskIntoConstraints="NO" id="uh9-kG-dfW">
+                                        <rect key="frame" x="11.666666666666671" y="127.6666666666667" width="250.66666666666663" height="19.666666666666671"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="t° (℃):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJy-It-vm2">
+                                                <rect key="frame" x="0.0" y="0.0" width="53.333333333333336" height="19.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                <color key="textColor" red="0.58081901069999997" green="0.088427625600000004" blue="0.31863921880000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp Value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UuT-0l-BkG">
+                                                <rect key="frame" x="163.33333333333331" y="0.0" width="87.333333333333314" height="19.666666666666668"/>
+                                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="H4r-um-RuK">
+                                <rect key="frame" x="197" y="358" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIE-z6-kjC">
+                                <rect key="frame" x="143" y="447" width="128" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update th weather"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qGb-Nt-49L"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="H4r-um-RuK" firstAttribute="centerY" secondItem="BjK-r5-3gs" secondAttribute="centerY" id="EPJ-1X-0Px"/>
+                            <constraint firstItem="eq5-eM-eps" firstAttribute="top" secondItem="qGb-Nt-49L" secondAttribute="top" constant="130" id="EXT-7r-pFJ"/>
+                            <constraint firstItem="qGb-Nt-49L" firstAttribute="bottom" secondItem="W0A-j9-Cay" secondAttribute="bottom" constant="100" id="EgP-Gh-YWz"/>
+                            <constraint firstItem="W0A-j9-Cay" firstAttribute="leading" secondItem="qGb-Nt-49L" secondAttribute="leading" constant="50" id="GJA-mJ-ZXf"/>
+                            <constraint firstItem="qGb-Nt-49L" firstAttribute="trailing" secondItem="eq5-eM-eps" secondAttribute="trailing" constant="70" id="Jrv-cY-Lwu"/>
+                            <constraint firstItem="H4r-um-RuK" firstAttribute="centerX" secondItem="BjK-r5-3gs" secondAttribute="centerX" id="Krm-M9-OgW"/>
+                            <constraint firstItem="qGb-Nt-49L" firstAttribute="trailing" secondItem="W0A-j9-Cay" secondAttribute="trailing" constant="50" id="SWH-gm-Yh7"/>
+                            <constraint firstItem="eq5-eM-eps" firstAttribute="leading" secondItem="qGb-Nt-49L" secondAttribute="leading" constant="70" id="gU3-cs-QPn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="H4r-um-RuK" id="OPX-vp-KLP"/>
+                        <outlet property="cityNameLabel" destination="82R-NH-dcq" id="cgj-WP-L5U"/>
+                        <outlet property="dataStackView" destination="eq5-eM-eps" id="tzQ-nb-zpN"/>
+                        <outlet property="tempValueLabel" destination="UuT-0l-BkG" id="Yvd-8O-qRU"/>
+                        <outlet property="weatherValueLabel" destination="bbp-6M-cAX" id="p28-Pf-oYN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="z7l-DH-kSd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3307.2463768115945" y="-51.358695652173914"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo_white" width="143.66667175292969" height="61.333332061767578"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
