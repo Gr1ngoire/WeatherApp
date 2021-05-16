@@ -10,6 +10,7 @@ import UIKit
 class ChoiceVC: UIViewController {
     
     
+    @IBOutlet weak var mainStackView: UIPickerView!
     @IBOutlet weak var cityPicker: UIPickerView!
     
     // required: picker row index, cities for picker, json link and cities array to  generate a link
@@ -36,11 +37,17 @@ class ChoiceVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createGradient(upperColor: UIColor.purple, lowerColor: UIColor.red)
-        
         //city picker setup
         self.cityPicker.delegate = self
         self.cityPicker.dataSource = self
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        createGradient(upperColor: UIColor.purple, lowerColor: UIColor.red)
+    }
+    
     
     // get the forecast
     @IBAction func cityPickButtonAction(_ sender: Any) {

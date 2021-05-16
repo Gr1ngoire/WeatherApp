@@ -35,10 +35,27 @@ class ForecastViewController: UIViewController {
         dataStackView.isHidden = false
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        createGradient(upperColor: UIColor.purple, lowerColor: UIColor.red)
+    }
+    
     @IBAction func getBackButton(_ sender: Any) {
         dismiss(animated: true)
     }
     
+    @IBAction func updateTheWeather(_ sender: Any) {
+        activityIndicator.startAnimating()
+        activityIndicator.hidesWhenStopped = true
+        receiveForecast()
+        updateData(with: foreCast)
+        activityIndicator.stopAnimating()
+    }
+    
+    
+}
+
+extension ForecastViewController {
     func receiveForecast() {
         guard let url = URL(string: forecastURL) else { return }
         
@@ -64,6 +81,4 @@ class ForecastViewController: UIViewController {
             
         }
     }
-    
 }
-
