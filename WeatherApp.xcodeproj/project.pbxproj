@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8405FED9265538CD00BE833C /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FED8265538CD00BE833C /* City.swift */; };
+		8405FEDC265544CA00BE833C /* CityInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405FEDB265544CA00BE833C /* CityInitializer.swift */; };
 		845B28E42650192500EC9C1F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B28E32650192500EC9C1F /* AppDelegate.swift */; };
 		845B28E62650192500EC9C1F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 845B28E52650192500EC9C1F /* SceneDelegate.swift */; };
 		845B28EB2650192500EC9C1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 845B28E92650192500EC9C1F /* Main.storyboard */; };
@@ -20,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8405FED8265538CD00BE833C /* City.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		8405FEDB265544CA00BE833C /* CityInitializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CityInitializer.swift; sourceTree = "<group>"; };
 		845B28E02650192500EC9C1F /* WeatherApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		845B28E32650192500EC9C1F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		845B28E52650192500EC9C1F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				845B2909265029AE00EC9C1F /* Forecast.swift */,
+				8405FED8265538CD00BE833C /* City.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,6 +103,7 @@
 				845B28F12650192500EC9C1F /* Info.plist */,
 				845B28E32650192500EC9C1F /* AppDelegate.swift */,
 				845B28E52650192500EC9C1F /* SceneDelegate.swift */,
+				8405FEDB265544CA00BE833C /* CityInitializer.swift */,
 			);
 			path = AdditionalPieces;
 			sourceTree = "<group>";
@@ -192,9 +198,11 @@
 				845B2907265023D400EC9C1F /* Extension + UIViewController.swift in Sources */,
 				845B290026501FAF00EC9C1F /* ForecastViewController.swift in Sources */,
 				845B29042650211300EC9C1F /* ChoiceVC.swift in Sources */,
+				8405FEDC265544CA00BE833C /* CityInitializer.swift in Sources */,
 				845B28E42650192500EC9C1F /* AppDelegate.swift in Sources */,
 				84EE2C052650EE1300B0683C /* Extension + ChoiceVC.swift in Sources */,
 				845B290A265029AE00EC9C1F /* Forecast.swift in Sources */,
+				8405FED9265538CD00BE833C /* City.swift in Sources */,
 				845B28E62650192500EC9C1F /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
